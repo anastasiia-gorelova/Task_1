@@ -1,24 +1,14 @@
-## Задание 1: Юнит-тесты
+# Юнит-тесты Stellar Burgers
 
-### Автотесты для проверки программы, которая помогает заказать бургер в Stellar Burgers
+Исходный код находится в пакете `praktikum`. В каталоге `tests` для каждого из классов `Bun`, `Burger`, `Ingredient` и `Database` есть отдельный тестовый модуль.
 
-### Реализованные сценарии
+## Запуск
 
-Созданы юнит-тесты, покрывающие классы `Bun`, `Burger`, `Ingredient`, `Database`
+Из корня репозитория выполните команды в активном окружении Python.
 
-Процент покрытия 100% (отчет: `htmlcov/index.html`)
+```sh
+python -m pip install -r requirements.txt
+python -m pytest --cov=praktikum --cov-report=term-missing --cov-report=html --cov-fail-under=70
+```
 
-### Структура проекта
-
-- `praktikum` - пакет, содержащий код программы
-- `tests` - пакет, содержащий тесты, разделенные по классам. Например, `bun_test.py`, `burger_test.py` и т.д.
-
-### Запуск автотестов
-
-**Установка зависимостей**
-
-> `$ pip install -r requirements.txt`
-
-**Запуск автотестов и создание HTML-отчета о покрытии**
-
->  `$ pytest --cov=praktikum --cov-report=html`
+HTML-отчёт создаётся в `htmlcov/index.html`. Тесты покрывают все исполняемые строки четырёх проверяемых классов. Покрытие всего пакета с учётом демонстрационного сценария в `praktikum/praktikum.py` составляет 77,53%.
